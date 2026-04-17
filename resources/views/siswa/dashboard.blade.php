@@ -7,7 +7,7 @@
         <div class="bg-gradient-to-r from-[#3b5bdb] to-[#4c6ef5] rounded-3xl p-10 text-white shadow-lg">
 
             <div class="inline-block bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm mb-6">
-                Halo, {{ auth()->user()->name }}
+                Halo, {{ auth()->user()->nama }}
             </div>
 
             <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">

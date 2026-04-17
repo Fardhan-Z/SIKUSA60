@@ -10,7 +10,7 @@
                     rounded-3xl p-10 text-white shadow-xl">
 
                 <div class="inline-block bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm mb-6">
-                    Selamat Datang, {{ auth()->user()->name }}
+                    Selamat Datang, {{ auth()->user()->nama }}
                 </div>
 
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">
