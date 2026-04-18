@@ -39,7 +39,7 @@
                     <label class="block text-sm font-medium text-gray-600 mb-1">
                         Password
                     </label>
-                    <input type="password" name="password" required
+                    <input type="password" name="password" required placeholder="Masukkan Password"
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5177ff] focus:outline-none transition">
                 </div>
                 <button type="submit"
