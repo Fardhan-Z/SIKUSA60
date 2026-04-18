@@ -41,20 +41,8 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-600 mb-1">Status</label>
-                        <select name="status"
-                            class="w-full px-4 py-3 rounded-xl border border-gray-300
-                               focus:ring-2 focus:ring-[#4c6ef5] outline-none">
-
-                            <option value="Ditolak" {{ $pengaduan->status == 'Ditolak' ? 'selected' : '' }}>
-                                Ditolak
-                            </option>
-                            <option value="Diproses" {{ $pengaduan->status == 'Diproses' ? 'selected' : '' }}>
-                                Diproses
-                            </option>
-                            <option value="Selesai" {{ $pengaduan->status == 'Selesai' ? 'selected' : '' }}>
-                                Selesai
-                            </option>
-                        </select>
+                        <input type="text" value="{{ $pengaduan->status ?? '-' }}"
+                            class="w-full px-4 py-3 rounded-xl border border-gray-300" readonly>
                     </div>
 
                     <div>
@@ -85,7 +73,7 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-600 mb-1">Status</label>
-                        <select name="status"
+                        <select name="status_tanggapan"
                             class="w-full px-4 py-3 rounded-xl border border-gray-300
                             focus:ring-2 focus:ring-[#4c6ef5] outline-none">
 

@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tanggapan extends Model
 {
-    protected $table = 'pengaduans';
+    protected $table = 'tanggapans';
 
     protected $fillable = [
         'user_id',
         'pengaduan_id',
         'tgl_tanggapan',
-        'tanggapan',
+        'tanggapans',
         'status'
 
     ];

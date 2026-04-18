@@ -14,8 +14,6 @@ class SiswaController extends Controller
 
         $userId = Auth::id();
 
-        $now = Carbon::now();
-
         $laporanTerakhir= Pengaduan::where('user_id', $userId)
             ->latest()
             ->first();
@@ -23,14 +21,6 @@ class SiswaController extends Controller
         $jumlahAspirasi = Pengaduan::where('user_id', $userId)
             ->count();
 
-        $totalKategori = Kategori::Count();
-
-        $laporanBulanan = Pengaduan::whereMonth('created_at', $now->month)
-            ->whereYear('created_at',$now->year)
-            ->count();
-
-        $laporanHarian = Pengaduan::wheredate('created_at', $now->toDateString())
-            ->count();
-        return view('admin.dashboard', compact('laporanTerakhir','jumlahAspirasi', 'laporanBulanan', 'laporanHarian', 'totalKategori'));
+        return view('siswa.dashboard', compact('laporanTerakhir','jumlahAspirasi'));
     }
 }

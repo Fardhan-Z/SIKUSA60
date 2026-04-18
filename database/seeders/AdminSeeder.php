@@ -12,7 +12,7 @@ class AdminSeeder extends Seeder
     {
         DB::table('users')->insert([
             'nama' => 'Admin Utama',
-            'nip_nis' => 'ADMIN001',
+            'nip_nis' => '12345678',
             'kelas' => null,
             'role' => 'admin',
             'password' => Hash::make('admin123'),
@@ -22,7 +22,7 @@ class AdminSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Budi Santoso',
-            'nip_nis' => 'SISWA001',
+            'nip_nis' => '12345677',
             'kelas' => 'X RPL 2',
             'role' => 'siswa',
             'password' => Hash::make('siswa123'),
@@ -32,7 +32,7 @@ class AdminSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Siti Aminah',
-            'nip_nis' => 'SISWA002',
+            'nip_nis' => '12345676',
             'kelas' => 'XI RPL 1',
             'role' => 'siswa',
             'password' => Hash::make('siswa123'),

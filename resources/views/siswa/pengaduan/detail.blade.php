@@ -23,7 +23,7 @@
                     <div class="space-y-5">
 
                         <div class="flex justify-between">
-                            <span class="text-gray-500 text-sm">Tanggal</span>
+                            <span class="text-gray-500 text-sm">Tanggal Pengaduan</span>
                             <span class="text-sm">
                                 {{ $pengaduan->created_at->format('d M Y') }}
                             </span>
@@ -62,6 +62,15 @@
                                 {{ $pengaduan->status }}
                             </span>
                         </div>
+
+                        @if ($pengaduan->tgl_selesai)
+                        <div class="flex justify-between">
+                            <span class="text-gray-500 text-sm">Tanggal Selesai</span>
+                            <span class="text-sm">
+                                {{ $pengaduan->tgl_selesai->format('d M Y') }}
+                            </span>
+                        </div>
+                        @endif
 
                         @if ($pengaduan->foto)
                             <div>

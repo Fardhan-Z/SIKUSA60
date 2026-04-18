@@ -65,7 +65,7 @@ class KategoriController extends Controller
 
         $kategori = Kategori::findOrFail($id);
 
-        Kategori::update([
+        $kategori->update([
             'nama_kategori' => $request->nama_kategori
         ]);
 

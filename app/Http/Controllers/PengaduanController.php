@@ -144,11 +144,12 @@ class PengaduanController extends Controller
             ]);
 
             Pengaduan::where('id', $id)->update([
-                'status' => $request->status_pengaduan
+                'status' => $request->status_tanggapan,
+                'tgl_selesai' => $request->status_tanggapan == 'Selesai' ? now() : null
             ]);
         });
 
-        return back()->with('success', 'Status & tanggapan berhasil diperbarui');
+        return redirect()->route('admin.pengaduan.index')->with('success', 'Status & tanggapan berhasil diperbarui');
     }
 
     public function show($id)
